@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'com.helios.eav'
+version '1.0'
+
+sourceCompatibility = 1.10
+targetCompatibility = 1.10
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile 'javax:javaee-web-api:8.0'
+    providedCompile 'org.slf4j:slf4j-api:1.7.22'
+    implementation 'com.zaxxer:HikariCP:3.2.0'
+    implementation 'org.postgresql:postgresql:42.2.5'
+    testImplementation 'junit:junit:4.12'
+}
